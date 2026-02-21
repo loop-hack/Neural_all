@@ -10,6 +10,7 @@ BaseOptions = python.BaseOptions
 HandLandmarker = vision.HandLandmarker
 HandLandmarkerOptions = vision.HandLandmarkerOptions
 VisionRunningMode = vision.RunningMode
+mp.draw = mp.solutions.drawing_utils
 
 options = HandLandmarkerOptions(
     base_options=BaseOptions(model_asset_path=model_path),
@@ -35,6 +36,10 @@ while True:
     timestamp = int(cap.get(cv2.CAP_PROP_POS_MSEC))
     results = landmarker.detect_for_video(mp_image, timestamp)
     print(results.multi_hand_landmarks)
+
+    if results.multi_hand_landmarks:
+        for handLms in results.multi_hand_landmarks:
+            mpDraw.draw_landmarks(img,handLms)
 
     cv2.imshow("Image", img)
 
