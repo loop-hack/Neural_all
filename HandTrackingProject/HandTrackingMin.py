@@ -40,10 +40,6 @@ HAND_CONNECTIONS = [
 cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
 face_cascade = cv2.CascadeClassifier(cascade_path)
 
-# =========================
-# Start Camera
-# =========================
-
 cap = cv2.VideoCapture(0)
 
 while True:
