@@ -33,10 +33,6 @@ HAND_CONNECTIONS = [
     (0,17)
 ]
 
-# =========================
-# Face Detection Setup
-# =========================
-
 cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
 face_cascade = cv2.CascadeClassifier(cascade_path)
 
