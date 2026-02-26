@@ -4,10 +4,6 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 import os
 
-# =========================
-# MediaPipe Hand Setup
-# =========================
-
 model_path = "hand_landmarker.task"
 
 BaseOptions = python.BaseOptions
